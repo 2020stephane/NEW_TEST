@@ -21,6 +21,7 @@ public class  MyPanel extends JPanel implements MouseListener, MouseMotionListen
     private static BufferedImage bufferImage = null;
     private ArrayList<Point> mypoints;
     private Rect rect;
+    private Circle circle;
 
     public MyPanel() {
         setLayout(null);
@@ -40,6 +41,7 @@ public class  MyPanel extends JPanel implements MouseListener, MouseMotionListen
             gc.setColor(Color.WHITE);
             gc.fillRect(0, 0, getWidth(), getHeight());
             rect = new Rect(new lib.Point(50,50), 50, 100);
+            circle = new Circle(new lib.Point(150, 150),50);
         }
         g2D.drawImage(bufferImage, null, 0, 0);
         if (startPoint != null && endPoint != null) {
@@ -94,7 +96,8 @@ public class  MyPanel extends JPanel implements MouseListener, MouseMotionListen
                 BasicStroke.JOIN_ROUND));
         g2D.drawLine(mypoints.get(0).x, mypoints.get(0).y,
                 mypoints.get(1).x, mypoints.get(1).y);
-        g2D.drawString("point : ", 50, 500);
+
         rect.DrawF(g2D);
+        circle.DrawF(g2D);
     }
 }

@@ -43,5 +43,10 @@ public class Rect extends Figure implements DrawFigure{
     public void DrawF(Graphics2D g2d) {
         g2d.drawRect((int) getPosition().getX(),(int) getPosition().getY(),
                 (int) width, (int) height);
-    }
+        g2d.drawString("rectangle : ", 50, 300);
+        g2d.drawString("position : X = " + getPosition().getX() +
+                "  Y = " + getPosition().getY() + "  width = " +
+                width + "  height = " + height, 60, 315);
+        }
+
 }

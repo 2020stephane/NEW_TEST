@@ -30,5 +30,9 @@ public  class Circle extends Figure implements DrawFigure {
         Point pos = getPosition();
         g2d.drawOval((int)pos.getX(), (int)pos.getY(),
                 rayon, rayon);
+        g2d.drawString("circle : ", 50, 335);
+        g2d.drawString("position : X = " + getPosition().getX() +
+                "  Y = " + getPosition().getY() + "  Rayon = " +
+                rayon, 60, 350);
     }
 }
