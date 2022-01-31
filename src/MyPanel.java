@@ -14,7 +14,8 @@ public class  MyPanel extends JPanel implements MouseListener, MouseMotionListen
 
 
 
-    private static int strokeWidth = 2;
+    private static int strokeWidth = 0;
+    private static int btn = 0;
     private static Color mycolor = null;
     private static Point startPoint = null;
     private static Point endPoint = null;
@@ -52,9 +53,10 @@ public class  MyPanel extends JPanel implements MouseListener, MouseMotionListen
     }
     @Override
     public void mouseClicked(MouseEvent e) {
-        mypoints.add(e.getPoint());
-        renderShape(bufferImage.createGraphics());
-        repaint();
+        btn = e.getButton();
+            mypoints.add(e.getPoint());
+            renderShape(bufferImage.createGraphics());
+            repaint();
 
 
     }
@@ -97,7 +99,8 @@ public class  MyPanel extends JPanel implements MouseListener, MouseMotionListen
                 BasicStroke.JOIN_ROUND));
         g2D.drawLine(mypoints.get(0).x, mypoints.get(0).y,
                 mypoints.get(0).x, mypoints.get(0).y);
-        if (mypoints.size() > 1) {
+
+        if (mypoints.size() > 1 & btn == 2) {
             g2D.drawLine(mypoints.get(0).x, mypoints.get(0).y,
                     mypoints.get(1).x, mypoints.get(1).y);
             mypoints = new ArrayList<>();
