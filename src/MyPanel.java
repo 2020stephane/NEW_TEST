@@ -1,4 +1,5 @@
 import lib.Circle;
+import lib.Figure;
 import lib.Rect;
 
 import javax.swing.*;
@@ -42,6 +43,7 @@ public class  MyPanel extends JPanel implements MouseListener, MouseMotionListen
             gc.fillRect(0, 0, getWidth(), getHeight());
             rect = new Rect(new lib.Point(50,50), 50, 100);
             circle = new Circle(new lib.Point(150, 150),50);
+            
         }
         g2D.drawImage(bufferImage, null, 0, 0);
         if (startPoint != null && endPoint != null) {

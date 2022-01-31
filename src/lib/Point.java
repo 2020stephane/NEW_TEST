@@ -8,7 +8,7 @@ public class Point {
     protected double y;
     protected Color color;
 
-//****************CONSTRUCTEURS***********************
+/****************CONSTRUCTEURS***********************/
 
     public Point() {
         this.x = 0;
@@ -26,7 +26,7 @@ public class Point {
         this.color = color;
     }
 
-//*****************METHODES***************************
+/*****************METHODES***************************/
 
     public void setX(double x)  {
         this.x = x;
