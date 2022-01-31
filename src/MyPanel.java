@@ -51,11 +51,10 @@ public class  MyPanel extends JPanel implements MouseListener, MouseMotionListen
     @Override
     public void mouseClicked(MouseEvent e) {
         mypoints.add(e.getPoint());
-        if (mypoints.size() > 1) {
-           renderShape(bufferImage.createGraphics());
-           repaint();
-        mypoints = new ArrayList<>();
-        }
+        renderShape(bufferImage.createGraphics());
+        repaint();
+
+
     }
 
     @Override
@@ -95,8 +94,12 @@ public class  MyPanel extends JPanel implements MouseListener, MouseMotionListen
         g2D.setStroke(new BasicStroke(2, BasicStroke.CAP_ROUND,
                 BasicStroke.JOIN_ROUND));
         g2D.drawLine(mypoints.get(0).x, mypoints.get(0).y,
-                mypoints.get(1).x, mypoints.get(1).y);
-
+                mypoints.get(0).x, mypoints.get(0).y);
+        if (mypoints.size() > 1) {
+            g2D.drawLine(mypoints.get(0).x, mypoints.get(0).y,
+                    mypoints.get(1).x, mypoints.get(1).y);
+            mypoints = new ArrayList<>();
+        }
         rect.DrawF(g2D);
         circle.DrawF(g2D);
     }
