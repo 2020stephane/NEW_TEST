@@ -10,6 +10,9 @@ import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+/**
+ * creation du conteneur
+ */
 public class  MyPanel extends JPanel implements MouseListener, MouseMotionListener {
 
 

@@ -1,3 +1,8 @@
+
+/**
+*  @author  : Stephane Brisse
+*  @version : V1.0
+*/
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,6 +14,13 @@ public class MainClass {
     public MainClass() {
          frame = new MyFrame();
     }
+
+/**
+ *  <p> creation d'une fenetre avec swing </p>
+ *
+ *
+ */
+
 
     public static class MyFrame extends JFrame {
 

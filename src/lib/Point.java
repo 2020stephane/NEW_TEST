@@ -26,14 +26,24 @@ public class Point {
         this.color = color;
     }
 
-/*****************METHODES***************************/
 
+    /**
+     * @param x
+     */
     public void setX(double x)  {
         this.x = x;
     }
+
+    /**
+     * @param  y
+     */
     public void setY(double y) {
         this.y = y;
     }
+
+    /**
+     * @return x
+     */
     public double getX() {
         return this.x;
     }
